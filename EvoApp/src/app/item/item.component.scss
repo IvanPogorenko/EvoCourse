@@ -1,0 +1,10 @@
+.item-card{
+  padding: 25px 0;
+
+  &__links{
+    margin-top: 20px;
+    width: 280px;
+    display: flex;
+    justify-content: space-between;
+  }
+}

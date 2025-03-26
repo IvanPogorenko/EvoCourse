@@ -1,0 +1,11 @@
+<section class="item-card">
+  <div class="container">
+    <h1>item page</h1>
+    <div class="item-card__links">
+      <a routerLink="details" class="link">Детали</a>
+      <a routerLink="list" [queryParams]="{list: 1, enable: true}" class="link">Список </a>
+    </div>
+  </div>
+</section>
+
+<router-outlet></router-outlet>

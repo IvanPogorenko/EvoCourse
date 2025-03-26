@@ -1,0 +1,12 @@
+.main{
+  padding: 25px 0;
+
+  &__nav{
+    margin-top: 40px;
+  }
+
+  &__list{
+    display: flex;
+    justify-content: space-around;
+  }
+}
