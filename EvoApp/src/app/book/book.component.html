@@ -1,0 +1,11 @@
+<p>{{this._booksService.book | json}}</p>
+<table>
+  <tr>
+    <td>key</td>
+    <td>value</td>
+  </tr>
+  <tr *ngFor="let key of Object.keys(this._booksService.book)">
+    <td>{{ key }}</td>
+    <td>{{ this._booksService.book[key] }}</td>
+  </tr>
+</table>
