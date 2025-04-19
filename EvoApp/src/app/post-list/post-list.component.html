@@ -1,0 +1,11 @@
+<router-outlet></router-outlet>
+
+<div class="posts">
+  <div class="card" style="width: 18rem;" *ngFor="let post of posts">
+    <div class="card-body">
+      <h5 class="card-title">{{post.title}}</h5>
+      <p class="card-text">{{post.body}}</p>
+      <a routerLink="{{post.id}}" class="btn btn-primary">Детали</a>
+    </div>
+  </div>
+</div>
