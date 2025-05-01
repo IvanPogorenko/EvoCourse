@@ -1,0 +1,182 @@
+.main-page{
+  padding: 100px 0;
+}
+
+.best-recipes{
+  padding: 150px 0 100px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__info{
+    max-width: 700px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+  }
+
+  &__text{
+    margin-top: 24px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    text-align: center;
+    color: #606060;
+  }
+
+  &__cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px ,400px));
+    grid-auto-rows: 436px;
+    gap: 40px;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__btn{
+    padding: 13px 25px;
+    border-radius: 6px;
+    border: 1px solid #D1D5DB;
+    background-color: white;
+    margin-top: 75px;
+    box-shadow: 0 0 1px 0 rgba(0, 0, 0, 0.05);
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    color: #374151;
+  }
+}
+
+.test-it{
+  padding: 150px 80px;
+  border: 1px solid #D1D5DB;
+
+  &__info{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 80px;
+  }
+
+  &__title{
+    font-weight: 600;
+    font-size: 48px;
+    line-height: 100%;
+    max-width: 568px;}
+
+  &__text{
+    max-width: 620px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+  }
+
+  &__cards{
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(270px, 290px));
+    grid-auto-rows: 316px;
+    justify-content: space-between;
+  }
+}
+
+.benefits{
+  padding: 150px 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  &__title{
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 36px;
+    text-align: center;
+  }
+
+  &__points{
+    display: flex;
+    justify-content: space-between;
+    margin-top: 81px;
+  }
+
+  &__point{
+    max-width: 280px;
+    display: flex;
+
+    &:not(:last-child){
+      margin-right: 8px;
+    }
+  }
+
+  &__point-svg{
+    margin-right: 12px;
+  }
+
+  &__point-title{
+    font-weight: 500;
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  &__point-text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    margin-top: 8px;
+    color: #6B7280;
+  }
+}
+
+.sub{
+  padding: 64px 0;
+
+  &__container{
+    background-color: #E7F9FD;
+    padding: 80px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  &__info{
+    max-width: 679px;
+  }
+
+  &__title{
+    font-weight: 700;
+    font-size: 30px;
+    line-height: 36px;
+    margin-bottom: 12px;
+  }
+
+  &__text{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 28px;
+    color: #707070;
+  }
+
+  &__input{
+    max-width: 281px;
+    color: #6B7280;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    padding: 13px 0 13px 21px;
+  }
+
+  &__btn{
+    padding: 13px 25px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: right;
+  }
+}

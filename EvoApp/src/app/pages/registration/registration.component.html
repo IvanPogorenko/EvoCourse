@@ -1,0 +1,66 @@
+<section class="registration">
+  <div class="container registration__container">
+    <h1 class="title__page">Зарегистрируйте ваш аккаунт</h1>
+    <form class="registration__form shadow-sm p-3 mb-5 bg-body rounded">
+      <div class="mb-3">
+        <label for="exampleInputLogin" class="form-label">Логин</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputLogin"
+          aria-describedby="loginHelp"
+          name="login"
+          required
+          #login="ngModel"
+          [(ngModel)]="registerUser.username"
+          [ngClass]="{'is-invalid': login.invalid  && login.touched}">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputPassword1" class="form-label">Пароль</label>
+        <input
+          type="password"
+          class="form-control"
+          id="exampleInputPassword1"
+          name="password"
+          required
+          minlength="4"
+          #password="ngModel"
+          [(ngModel)]="registerUser.password"
+          [ngClass]="{'is-invalid': password.invalid  && password.touched}">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputName" class="form-label">Имя</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputName"
+          name="firstName"
+          [(ngModel)]="registerUser.firstName">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputLastname" class="form-label">Фамилия</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputLastname"
+          name="lastName"
+          [(ngModel)]="registerUser.lastName">
+      </div>
+      <div class="mb-3">
+        <label for="exampleInputMiddleName" class="form-label">Отчество (при наличии)</label>
+        <input
+          type="text"
+          class="form-control"
+          id="exampleInputMiddleName"
+          name="middleName"
+          [(ngModel)]="registerUser.middleName">
+      </div>
+      <button
+        type="submit"
+        class="btn btn-primary
+        registration__btn"
+        [disabled]="login.invalid || password.invalid"
+        (click)="onSubmit()">Зарегистрироваться</button>
+    </form>
+  </div>
+</section>

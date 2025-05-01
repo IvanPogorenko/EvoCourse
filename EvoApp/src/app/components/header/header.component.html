@@ -1,0 +1,26 @@
+<header class="header">
+  <div class="container header__container">
+    <div class="logo">
+      Foodie
+    </div>
+    <nav class="navigation">
+      <ul class="header__nav">
+        <li><a class="link" [routerLink]="appRotes.index">Главная</a></li>
+        <li><a class="link" [routerLink]="appRotes.recipes.index">Каталог рецептов</a></li>
+      </ul>
+    </nav>
+    <div class="header__action">
+      <ng-container *ngIf="authInfo?.isAuth; else loginButton">
+        <app-user-info [user]="userInfo"></app-user-info>
+      </ng-container>
+
+      <ng-template #loginButton>
+        <button type="button"
+                class="btn header__btn"
+                [routerLink]="appRotes.authorization">
+          Войти в аккаунт
+        </button>
+      </ng-template>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,10 @@
+<section class="catalog">
+  <div class="container">
+    <div class="catalog__cards">
+      <ng-container *ngFor="let recipe of recipes">
+        <app-recipe-card-main [recipe]="recipe"></app-recipe-card-main>
+      </ng-container>
+    </div>
+  </div>
+</section>
+<router-outlet></router-outlet>

@@ -1,0 +1,121 @@
+<main class="main-page">
+  <div class="container">
+
+    <app-slider [recipes]="sliderRecipes"></app-slider>
+
+    <section class="best-recipes">
+      <div class="best-recipes__info">
+        <h2 class="title best-recipes__title">Лучшие рецепты</h2>
+        <p class="text best-recipes__text">На нашем сайте вы найдете лучшие рецепты, которые помогут вам создавать
+          великолепные блюда и
+          порадовать своих близких и гостей своим кулинарным мастерством.</p>
+      </div>
+      <div class="best-recipes__cards">
+        <ng-container *ngFor="let recipe of bestRecipes.slice(0, 3)">
+          <app-recipe-card-main [recipe]="recipe"></app-recipe-card-main>
+        </ng-container>
+        <ng-container *ngIf="isShowMore">
+          <ng-container *ngFor="let recipe of bestRecipes.slice(3, 6)">
+            <app-recipe-card-main [recipe]="recipe"></app-recipe-card-main>
+          </ng-container>
+        </ng-container>
+      </div>
+      <button *ngIf="!isShowMore" class="best-recipes__btn" (click)="showMore()">Показать еще</button>
+    </section>
+  </div>
+  <section class="test-it">
+    <div class="test-it__info">
+      <h2 class="title test-it__title">Попробуйте эти вкусные рецепты</h2>
+      <p class="text test-it__text">Lorem ipsum dolor sit amet, consectetuipisicing elit, sed do eiusmod tempor
+        incididunt ut labore et dolore magna aliqut enim ad minim </p>
+    </div>
+    <div class="test-it__cards">
+      <ng-container *ngFor="let recipe of testRecipes">
+        <app-recipe-card-lite [recipe]="recipe"></app-recipe-card-lite>
+      </ng-container>
+    </div>
+  </section>
+  <div class="container">
+    <section class="benefits">
+      <h3 class="title benefits__title">Почему именно мы?</h3>
+      <div class="benefits__points">
+        <div class="benefits__point">
+          <div class="benefits__point-svg">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 13L9.5 17L19.5 7" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="benefits__point-info">
+            <h4 class="benefits__point-title">Проверенные рецепты</h4>
+            <p class="benefits__point-text">Вы можете найти множество проверенных рецептов, которые помогут вам приготовить вкусные и разнообразные блюда для всей семьи.</p>
+          </div>
+        </div>
+        <div class="benefits__point">
+          <div class="benefits__point-svg">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 13L9.5 17L19.5 7" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="benefits__point-info">
+            <h4 class="benefits__point-title">Для всех</h4>
+            <p class="benefits__point-text">Вы сможете найти легкие и вкусные блюда, которые понравятся и детям, и взрослым.</p>
+          </div>
+        </div>
+        <div class="benefits__point">
+          <div class="benefits__point-svg">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 13L9.5 17L19.5 7" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="benefits__point-info">
+            <h4 class="benefits__point-title">Огромное разнообразие</h4>
+            <p class="benefits__point-text">Разнообразие рецептов для всех порадует самых разносторонних гурманов</p>
+          </div>
+        </div>
+        <div class="benefits__point">
+          <div class="benefits__point-svg">
+            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M5.5 13L9.5 17L19.5 7" stroke="#10B981" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="benefits__point-info">
+            <h4 class="benefits__point-title">Храним рецепты для вас</h4>
+            <p class="benefits__point-text">Это отличный способ организовать и хранить свою коллекцию кулинарных рецептов. Вместо того, чтобы хранить бумажные копии или оставлять их в разных кулинарных книгах.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="sub">
+      <div class="sub__container">
+        <div class="sub__info">
+          <h3 class="sub__title">Хотите получать новые рецепты?</h3>
+          <p class="sub__text">Не пропустите ни одного вкусного рецепта! Подпишитесь на нашу рассылку, чтобы получать новые кулинарные идеи и рецепты прямо в свою почту.</p>
+        </div>
+        <form class="row g-2 sub__form">
+          <div class="col-auto">
+            <input
+              type="email"
+              class="form-control sub__input"
+              id="inputPassword2"
+              placeholder="Введите ваш email..."
+              name="email"
+              required
+              email
+              [(ngModel)]="email"
+              #emailField="ngModel"
+              [ngClass]="{'is-invalid': emailField.invalid  && emailField.touched}">
+          </div>
+          <div class="col-auto">
+            <button
+              type="submit"
+              class="btn sub__btn"
+              [disabled]="emailField.invalid"
+              (click)="onSubmit()">Подписаться</button>
+          </div>
+        </form>
+      </div>
+    </section>
+  </div>
+  <app-toast [content]="feedBack"></app-toast>
+</main>

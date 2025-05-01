@@ -1,0 +1,22 @@
+.modal{
+
+  &__close{
+    background-color: white;
+    border: 1px solid #D1D5DB;
+    color: #374151;
+  }
+
+  &__wrapper{
+    display: flex;
+    align-items: center;
+  }
+
+  &__svg{
+    margin-right: 16px;
+  }
+}
+
+.modal-content{
+  padding-top: 24px;
+  padding-left: 24px;
+}

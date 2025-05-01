@@ -1,0 +1,67 @@
+.authorization{
+  padding: 156px 0 146px 0;
+
+  &__container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  &__error-msg{
+    position: fixed;
+    left: 20px;
+    top: 20px;
+  }
+
+  &__form{
+    padding: 32px 40px;
+    max-width: 448px;
+    margin-top: 32px;
+  }
+
+  &__link{
+    color: #3A3395;
+    font-size: 14px;
+    line-height: 20px;
+    text-align: right;
+    margin-left: 87px;
+  }
+
+  &__btn{
+    width: 100%;
+
+    &_git-login{
+      background-color: white;
+      border: 1px solid #D1D5DB;
+    }
+
+  }
+
+  &__divider {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    margin: 24px 0;
+    color: #6B7280;
+
+    &::before,
+    &::after {
+      content: "";
+      flex: 1;
+      border-bottom: 1px solid #6B7280;
+    }
+
+    &::before {
+      margin-right: 8px;
+    }
+
+    &::after {
+      margin-left: 8px;
+    }
+  }
+
+  &__divider-text {
+    font-size: 14px;
+  }
+
+}

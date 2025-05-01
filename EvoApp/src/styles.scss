@@ -1,1 +1,84 @@
-/* You can add global styles to this file, and also import other style files */
+*, *:before, *:after {
+  box-sizing: border-box;
+}
+
+html, body, div, span, object, iframe, figure, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, code, em, img, small, strike, strong, sub, sup, tt, b, u, i, ol, ul, li, fieldset, form, label, table, caption, tbody, tfoot, thead, tr, th, td, main, canvas, embed, footer, header, nav, section, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  vertical-align: baseline;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  text-size-adjust: none;
+  font-family: "Inter", sans-serif;
+  text-decoration: none;
+}
+
+footer, header, nav, section, main {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after, q:before, q:after {
+  content: '';
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+input {
+  -webkit-appearance: none;
+  border-radius: 0;
+}
+
+.container{
+  max-width: 100%;
+  padding: 0 80px;
+  background-color: white;
+}
+
+.logo{
+  font-weight: 700;
+  font-size: 24px;
+  line-height: 100%;
+}
+
+.btn{
+  background-color: #3A3395;
+  border-radius: 6px;
+  color: white;
+}
+
+.link{
+  color: black;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.title{
+
+  &__page{
+    font-weight: 800;
+    font-size: 30px;
+    line-height: 36px;
+  }
+
+}
+
+.alert{
+  margin-bottom: unset;
+}
